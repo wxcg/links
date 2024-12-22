@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
@@ -21,6 +22,7 @@
             margin: 0;
             padding: 0
         }
+
         @-webkit-keyframes slidetounlock {
             0% {
                 background-position: -100px 0
@@ -38,6 +40,7 @@
                 background-position: 100px 0
             }
         }
+
         @keyframes slidetounlock {
             0% {
                 background-position: -100px 0
@@ -55,20 +58,25 @@
                 background-position: 100px 0
             }
         }
+
         .min-h-full {
             min-height: 100vh
         }
+
         .flex {
             display: flex
         }
+
         .flex-both-center {
             display: flex;
             justify-content: center;
             align-items: center
         }
+
         .flex-wrap {
             flex-wrap: wrap
         }
+
         .flex-h-center {
             display: flex;
             justify-content: center
@@ -363,6 +371,14 @@
             object-fit: cover
         }
 
+        .link-cfi-image {
+            width: 100px;
+            height: 100px;
+            left: 9px;
+            -o-object-fit: cover;
+            object-fit: cover
+        }
+
         .page-logo {
             position: absolute;
             bottom: 32px;
@@ -476,6 +492,15 @@
         .dark-btn .bl-circle-loader {
             border-top: 3px solid #fff;
             border-right: 3px solid #fff
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .column {
+            flex: 50%;
+            padding: 5px;
         }
 
         @-webkit-keyframes spin {
@@ -604,6 +629,7 @@
             font-size: 16px;
             font-weight: 700;
         }
+
         .page-item-each {
             color: #1F365C;
             font-family: 'Inter', sans-serif;
@@ -614,154 +640,228 @@
 
             min-height: 60px;
         }
+
         .page-item-wrap {
             margin: 16px 0;
         }
+
         .page-item-wrap:last-child {
             margin-bottom: 0;
         }
+
         .page-item-wrap:hover {
             transform: translate3d(0px, 0px, 0px) scale(1.015);
         }
+
         .page-item {
             border: 0px solid #FFFFFF;
             background: #FFFFFF;
             border-radius: 8px;
             box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 0.12), 0px 10px 32px -4px rgba(24, 39, 75, 0.1), inset 0px 0px 2px 1px rgba(24, 39, 75, 0.05);
         }
+
         .link-each-image,
         .page-item-wrap {
             border-radius: 8px;
         }
+
         .page-text-font {
             font-family: 'Inter', sans-serif;
             text-transform: none;
 
         }
+
         .page-text-color {
             color: #1F365C;
         }
+
         .social-icon-fill path,
         .social-icon-fill circle,
         .social-icon-fill rect {
             fill: #1F365C;
         }
+
         .page-overlay-btn {
             border: 2px solid #1F365C;
         }
+
         hr.rounded {
-  border-top: 6px solid #FFFFFF;
-  border-radius: 5px;
-}
+            border-top: 6px solid #FFFFFF;
+            border-radius: 5px;
+        }
     </style>
 </head>
+
 <body>
     <div class="min-h-full flex-h-center" id="background_div">
-        <img class="page-image" src="background.jpg"
-            alt="background" />
+        <img class="page-image" src="background.jpg" alt="background" />
         <canvas id="bg-canvas" class="background-overlay"></canvas>
 
         <div class="mt-48 page-full-wrap relative ">
             <input type="hidden" value="creator-page" id="page-type">
-            <img class="display-image m-auto" src="logo.png"
-                alt="Samir Paul" />
+            <img class="display-image m-auto" src="logo.png" alt="Samir Paul" />
             <h2 class="page-title page-text-color page-text-font mt-16 text-center">
                 Craig Garnham
             </h2>
             <div class="mt-24">
-                <div class="page-item-wrap relative">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://www.tiktok.com/@wxcg" data-type="page_item">
-                        <img class="link-each-image" src="tiktok.webp" alt="TikTok @wxcg" />
-                        <span class=" item-title text-center">TikTok @wxcg</span>
-                    </a>
+                <div class="row">
+                    <div class="column">
+                        <div class="page-item-wrap relative">
+                            <div class="page-item flex-both-center absolute"></div>
+                            <a target="_blank" class="page-item-each py-10 flex-both-center"
+                                href="https://www.tiktok.com/@wxcg" data-type="page_item">
+                                <img class="link-each-image" src="tiktok.webp" alt="TikTok @wxcg" />
+                                <span class=" item-title text-center">TikTok</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="page-item-wrap relative">
+                            <div class="page-item flex-both-center absolute"></div>
+                            <a target="_blank" class="page-item-each py-10 flex-both-center"
+                                href="https://www.instagram.com/wxcg/" data-type="page_item">
+                                <img class="link-each-image" src="insta.png" alt="Instagram @wxcg" />
+                                <span class=" item-title text-center">Instagram</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="page-item-wrap relative">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://www.instagram.com/wxcg/" data-type="page_item">
-                        <img class="link-each-image" src="insta.png" alt="Instagram @wxcg" />
-                        <span class=" item-title text-center">Instagram @wxcg</span>
-                    </a>
-                </div>
-                <div class="page-item-wrap relative">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://www.youtube.com/channel/UCIf9d4DBOZMYHFUZkLCOD9Q" data-type="page_item">
-                        <img class="link-each-image" src="youtube.png" alt="Youtube @wxcg" />
-                        <span class=" item-title text-center">Youtube @wxcg</span>
-                    </a>
-                </div>
-                <hr class="rounded">
-                <div class="page-item-wrap relative">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://weather.gg" data-type="page_item">
-                        <img class="link-each-image" src="weathergg.png" alt="WeatherGG" />
-                        <span class=" item-title text-center">Weather.GG</span>
-                    </a>
-                </div>
-                <div class="page-item-wrap relative">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://cg1network.com" data-type="page_item">
-                        <img class="link-each-image" src="cg1net.png" alt="CG1NETWORK" />
-                        <span class=" item-title text-center">CG1NETWORK.com</span>
-                    </a>
-                </div>
-                <div class="page-item-wrap relative">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://descriptor.weather.gg/" data-type="page_item">
-                        <img class="link-each-image" src="descriptor.png" alt="Descriptor" />
-                        <span class=" item-title text-center">Descriptor</span>
-                    </a>
+                <div class="row">
+                    <div class="column">
+                        <div class="page-item-wrap relative">
+                            <div class="page-item flex-both-center absolute"></div>
+                            <a target="_blank" class="page-item-each py-10 flex-both-center"
+                                href="https://www.youtube.com/channel/UCIf9d4DBOZMYHFUZkLCOD9Q" data-type="page_item">
+                                <img class="link-each-image" src="youtube.png" alt="Youtube @wxcg" />
+                                <span class=" item-title text-center">Youtube</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="page-item-wrap relative">
+                            <div class="page-item flex-both-center absolute"></div>
+                            <a target="_blank" class="page-item-each py-10 flex-both-center"
+                                href="https://www.linkedin.com/in/wxcg/" data-type="page_item">
+                                <img class="link-each-image" src="linkedin.png" alt="LinkedIn" />
+                                <span class=" item-title text-center">LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <hr class="rounded">
-                <div class="page-item-wrap relative">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://www.linkedin.com/in/wxcg/" data-type="page_item">
-                        <img class="link-each-image" src="linkedin.png" alt="LinkedIn" />
-                        <span class=" item-title text-center">LinkedIn</span>
-                    </a>
+                <div class="row">
+                    <div class="column">
+                        <div class="page-item-wrap relative">
+                            <div class="page-item flex-both-center absolute"></div>
+                            <a target="_blank" class="page-item-each py-10 flex-both-center" href="https://weather.gg"
+                                data-type="page_item">
+                                <img class="link-each-image" src="weathergg.png" alt="WeatherGG" />
+                                <span class=" item-title text-center">Weather.GG</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="page-item-wrap relative">
+                            <div class="page-item flex-both-center absolute"></div>
+                            <a target="_blank" class="page-item-each py-10 flex-both-center"
+                                href="https://cg1network.com" data-type="page_item">
+                                <img class="link-each-image" src="cg1net.png" alt="CG1NETWORK" />
+                                <span class=" item-title text-center">CG1NETWORK.com</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="page-item-wrap relative">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://www.credly.com/users/craig-garnham/badges" data-type="page_item">
-                        <img class="link-each-image" src="credly.png" alt="Credly Badges" />
-                        <span class=" item-title text-center">Credly Badges</span>
-                    </a>
+                <div class="row">
+                    <div class="column">
+                        <div class="page-item-wrap relative">
+                            <div class="page-item flex-both-center absolute"></div>
+                            <a target="_blank" class="page-item-each py-10 flex-both-center"
+                                href="https://descriptor.weather.gg/" data-type="page_item">
+                                <img class="link-each-image" src="descriptor.png" alt="Descriptor" />
+                                <span class=" item-title text-center">Descriptor</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="page-item-wrap relative">
+                            <div class="page-item flex-both-center absolute"></div>
+                            <a target="_blank" class="page-item-each py-10 flex-both-center"
+                                href="https://medium.com/wxit" data-type="page_item">
+                                <img class="link-each-image" src="wxit.jpg" alt="WXIT" />
+                                <span class=" item-title text-center">WXIT</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="page-item-wrap relative">
+                <hr class="rounded">
+                <div class="page-item-wrap relative text-center">
                     <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://www.credential.net/profile/wxcg/wallet" data-type="page_item">
-                        <img class="link-each-image" src="accredible.jpeg" alt="Accredible Badges" />
-                        <span class=" item-title text-center">Accredible Badges</span>
-                    </a>
+                    <div data-iframe-width="150" data-iframe-height="270"
+                        data-share-badge-id="5786ff9a-cf47-4767-82ae-99361c48110d"
+                        data-share-badge-host="https://www.credly.com"></div>
+                    <div data-iframe-width="150" data-iframe-height="270"
+                        data-share-badge-id="b6376140-b60b-4db5-a7ed-daef0e64b5ab"
+                        data-share-badge-host="https://www.credly.com"></div>
+                    <div data-iframe-width="150" data-iframe-height="270"
+                        data-share-badge-id="a490abdf-9fb3-4387-8759-693603799bd5"
+                        data-share-badge-host="https://www.credly.com"></div>
+                    <div data-iframe-width="150" data-iframe-height="270"
+                        data-share-badge-id="4f8499e2-60d6-4f90-87cd-4174a1d30303"
+                        data-share-badge-host="https://www.credly.com"></div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <div class="page-item-wrap relative">
+                            <div class="page-item flex-both-center absolute"></div>
+                            <a target="_blank" class="page-item-each py-10 flex-both-center"
+                                href="http://credentials.corporatefinanceinstitute.com/1853a9d0-b183-40bd-bb33-0ede71112947"
+                                data-type="page_item">
+                                <img class="link-cfi-image"
+                                    src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/71094992"
+                                    alt="Descriptor" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="page-item-wrap relative">
+                            <div class="page-item flex-both-center absolute"></div>
+                            <a target="_blank" class="page-item-each py-10 flex-both-center"
+                                href="http://credentials.corporatefinanceinstitute.com/7b643e86-5388-41b8-8d5a-afe8d231a20b"
+                                data-type="page_item">
+                                <img class="link-cfi-image"
+                                    src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/61933882"
+                                    alt="Descriptor" />
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <hr class="rounded">
-                <div class="page-item-wrap relative">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://supereffective.gg/apps/livingdex/clpe6zzrm000efobchz39gxy8" data-type="page_item">
-                        <img class="link-each-image" src="pokemongo.jpeg" alt="Pokemon Go" />
-                        <span class=" item-title text-center">Pokemon GO Pokedex</span>
-                    </a>
+            <div class="row">
+                <div class="column">
+                    <div class="page-item-wrap relative">
+                        <div class="page-item flex-both-center absolute"></div>
+                        <a target="_blank" class="page-item-each py-10 flex-both-center"
+                            href="https://supereffective.gg/apps/livingdex/clpe6zzrm000efobchz39gxy8"
+                            data-type="page_item">
+                            <img class="link-each-image" src="pokemongo.jpeg" alt="Pokemon Go" />
+                            <span class=" item-title text-center">Pokemon GO Pokedex</span>
+                        </a>
+                    </div>
                 </div>
-                  <div class="page-item-wrap relative">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://my.flightradar24.com/wxcg" data-type="page_item">
-                        <img class="link-each-image" src="myfr.png" alt="My Flightradar 24" />
-                        <span class=" item-title text-center">My Flightradar 24</span>
-                    </a>
+                <div class="column">
+                    <div class="page-item-wrap relative">
+                        <div class="page-item flex-both-center absolute"></div>
+                        <a target="_blank" class="page-item-each py-10 flex-both-center"
+                            href="https://my.flightradar24.com/wxcg" data-type="page_item">
+                            <img class="link-each-image" src="myfr.png" alt="My Flightradar 24" />
+                            <span class=" item-title text-center">My Flightradar 24</span>
+                        </a>
+                    </div>
                 </div>
+            </div>
         </div>
     </div>
+    <script type="text/javascript" async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
 </body>
 </html>
